@@ -23,7 +23,6 @@ scales = np.arange(1, 128)
 coef, freqs = pywt.cwt(x, scales, 'morl', sampling_period=1/fs)
 
 def custom_wavelet(t, freq, bandwidth):
-    """Создание вейвлета с регулируемой полосой"""
     sigma = bandwidth / (2 * np.pi * freq)
     return (np.exp(2j * np.pi * freq * t) * 
             np.exp(-t**2 / (2 * sigma**2)))
@@ -62,7 +61,6 @@ class Chirplet:
         self.duration = duration
         
     def generate(self, t_center, fs):
-        """Генерация чирплета с центром в t_center"""
         t_len = int(self.duration * fs)
         t_local = np.linspace(-self.duration/2, self.duration/2, t_len)
         
@@ -101,7 +99,6 @@ def chirplet_transform_simple(x, chirplets, t, fs):
 chirp_result = chirplet_transform_simple(x, chirplets, t, fs)
 
 def adaptive_wavelet_simple(x, t, initial_freq=50):
-    """Упрощенный адаптивный вейвлет"""
     dt = t[1] - t[0]
     wavelet_len = 200  
     
