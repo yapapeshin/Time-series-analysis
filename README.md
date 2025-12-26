@@ -12,5 +12,3 @@
 
 
 ### Лабораторная 3 - Вевлеты и изменяемые вейвлеты (Чирплеты).
-<img width="2872" height="1595" alt="image" src="https://github.com/user-attachments/assets/c2afd96a-163f-48b8-b17a-9edddf1ba2c6" />
-<img width="1005" height="836" alt="image" src="https://github.com/user-attachments/assets/c83d9c13-0880-4cd1-98c0-5a673f5e7957" />
